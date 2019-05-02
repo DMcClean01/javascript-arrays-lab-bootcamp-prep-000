@@ -19,10 +19,18 @@ function destructivelyRemoveFirstKitten() {
   return kittens.shift("Milo");
 }
 
-function appendKitten()
+function appendKitten(kittens, elementC) {
+  return [...kittens, elementC];
+}
 
-function prependKitten()
+function prependKitten(kittens, elementC) {
+  return [elementC, ...kittens];
+}
 
-function removeLastKitten()
+function removeLastKitten(kittens) {
+  return kittens.slice(0, kittens.length - 1);
+}
 
-function removeFirstKitten()
+function removeFirstKitten(kittens) {
+  return kittens.slice(1);
+}
